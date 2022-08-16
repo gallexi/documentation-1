@@ -9692,6 +9692,11 @@ paths:
           $ref: '#/components/responses/NotAuthorizedResponse'
         '429':
           $ref: '#/components/responses/TooManyRequestsResponse'
+      security:
+      - apiKeyAuth: []
+        appKeyAuth: []
+      - AuthZ:
+        - events_read
       summary: Search events
       tags:
       - Events
@@ -12907,9 +12912,6 @@ paths:
           $ref: '#/components/responses/NotFoundResponse'
         '429':
           $ref: '#/components/responses/TooManyRequestsResponse'
-      security:
-      - apiKeyAuth: []
-        appKeyAuth: []
       summary: List all the RUM applications
       tags:
       - RUM
@@ -12935,9 +12937,6 @@ paths:
           $ref: '#/components/responses/BadRequestResponse'
         '429':
           $ref: '#/components/responses/TooManyRequestsResponse'
-      security:
-      - apiKeyAuth: []
-        appKeyAuth: []
       summary: Create a new RUM application
       tags:
       - RUM
@@ -12974,9 +12973,6 @@ paths:
           $ref: '#/components/responses/NotFoundResponse'
         '429':
           $ref: '#/components/responses/TooManyRequestsResponse'
-      security:
-      - apiKeyAuth: []
-        appKeyAuth: []
       summary: Delete a RUM application
       tags:
       - RUM
@@ -13003,9 +12999,6 @@ paths:
           $ref: '#/components/responses/NotFoundResponse'
         '429':
           $ref: '#/components/responses/TooManyRequestsResponse'
-      security:
-      - apiKeyAuth: []
-        appKeyAuth: []
       summary: Get a RUM application
       tags:
       - RUM
@@ -13046,9 +13039,6 @@ paths:
           description: Unprocessable Entity.
         '429':
           $ref: '#/components/responses/TooManyRequestsResponse'
-      security:
-      - apiKeyAuth: []
-        appKeyAuth: []
       summary: Update a RUM application
       tags:
       - RUM
@@ -13934,11 +13924,6 @@ paths:
           description: Not Found
         '429':
           $ref: '#/components/responses/TooManyRequestsResponse'
-      security:
-      - apiKeyAuth: []
-        appKeyAuth: []
-      - AuthZ:
-        - security_monitoring_signals_write
       summary: Modify the triage assignee of a security signal
       tags:
       - Security Monitoring
@@ -13985,11 +13970,6 @@ paths:
           description: Not Found
         '429':
           $ref: '#/components/responses/TooManyRequestsResponse'
-      security:
-      - apiKeyAuth: []
-        appKeyAuth: []
-      - AuthZ:
-        - security_monitoring_signals_write
       summary: Change the related incidents of a security signal
       tags:
       - Security Monitoring
@@ -14036,11 +14016,6 @@ paths:
           description: Not Found
         '429':
           $ref: '#/components/responses/TooManyRequestsResponse'
-      security:
-      - apiKeyAuth: []
-        appKeyAuth: []
-      - AuthZ:
-        - security_monitoring_signals_write
       summary: Change the triage state of a security signal
       tags:
       - Security Monitoring
